@@ -26,12 +26,21 @@
 # print(string[half2])
 
 rucksack = []
+compartment1 = []
+compartment2 = []
+match = []
 
 with open("rucksacks.txt") as f:
     for each in f:
         rucksack.append(each.strip())
 
 # split each string from list in half.
+
+for letter in rucksack:
+    L = len(rucksack)
+    half1 = slice(0, L//2)
+    half2 = slice(L//2, L)
+
 
 # iterate both new lists to make another list with matching elements.
 
