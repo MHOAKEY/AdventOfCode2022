@@ -1,9 +1,3 @@
-rucksack = []
-
-with open("rucksacks.txt") as f:
-    for each in f:
-        rucksack.append(each.strip())
-
 # one = "vJrwpWtwJgWr"
 # two = "hcsFMMfFFhFp"
 # list1 = []
@@ -23,10 +17,24 @@ with open("rucksacks.txt") as f:
 
 # print(match)
 
-string = "vJrwpWtwJgWrhcsFMMfFFhFp"
-x = len(string)
-half1 = slice(0, x//2)
-half2 = slice(x//2, x)
+# string = "vJrwpWtwJgWrhcsFMMfFFhFp"
+# x = len(string)
+# half1 = slice(0, x//2)
+# half2 = slice(x//2, x)
 
-print(string[half1])
-print(string[half2])
+# print(string[half1])
+# print(string[half2])
+
+rucksack = []
+
+with open("rucksacks.txt") as f:
+    for each in f:
+        rucksack.append(each.strip())
+
+# split each string from list in half.
+
+# iterate both new lists to make another list with matching elements.
+
+# convert matching elements to their values.
+
+# total values.
