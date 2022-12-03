@@ -36,10 +36,14 @@ with open("rucksacks.txt") as f:
 
 # split each string from list in half.
 
-for letter in rucksack:
-    L = len(rucksack)
+for string in rucksack:
+    L = len(string)
     half1 = slice(0, L//2)
-    half2 = slice(L//2, L)
+    string = string[half1]
+    compartment1.append(string)
+
+print(compartment1)
+
 
 
 # iterate both new lists to make another list with matching elements.
