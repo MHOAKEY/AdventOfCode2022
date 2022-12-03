@@ -26,35 +26,46 @@
 # print(string[half2])
 
 rucksack = []
-compartment1 = []
-compartment2 = []
+splitRuckSack = []
 match = []
+values = []
 
-with open("rucksacks.txt") as f:
-    for each in f:
+with open("rucksacks.txt") as txt:
+    for each in txt:
         rucksack.append(each.strip())
 
-# split each string from list in half.
 
 for string in rucksack:
-    L = len(string)
-    half1 = slice(0, L//2)
-    string = string[half1]
-    compartment1.append(string)
+    middle = int(len(string) / 2)
+    half1 = string[0:middle]
+    half2 = string[middle:]
+    splitRuckSack.append([half1, half2])
     
-for string in rucksack:
-    L = len(string)
-    half2 = slice(L//2, L)
-    string = string[half2]
-    compartment2.append(string)
+
+for eachArray in splitRuckSack:
+    for letter in eachArray[0]:
+        if eachArray[1].find(letter) != -1:
+            match.append(letter)
+            break
 
 
-print(compartment2)
+lower = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+
+upper = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
+
+for letter in match:
+    for lowerletter in lower:
+        if letter == lowerletter:
+            values.append(lower.index(lowerletter) + 1)
+    for upperletter in upper:
+        if letter == upperletter:
+            values.append(upper.index(upperletter) + 27)
 
 
+valuesSum = 0
 
-# iterate both new lists to make another list with matching elements.
+for num in values:
+    valuesSum += num
 
-# convert matching elements to their values.
+print(valuesSum)
 
-# total values.
