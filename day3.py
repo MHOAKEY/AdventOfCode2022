@@ -41,8 +41,15 @@ for string in rucksack:
     half1 = slice(0, L//2)
     string = string[half1]
     compartment1.append(string)
+    
+for string in rucksack:
+    L = len(string)
+    half2 = slice(L//2, L)
+    string = string[half2]
+    compartment2.append(string)
 
-print(compartment1)
+
+print(compartment2)
 
 
 
