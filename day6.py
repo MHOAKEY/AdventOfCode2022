@@ -5,4 +5,10 @@ with open("day6.txt") as dataStream:
         for letter in data:
             dataStreamArray.append(letter)
 
-print(dataStreamArray)
+def startOfPacketMarker(data):
+    for index in range(len(data)):
+        fourLetterCheck = data[index:index + 4]
+        if len(set(fourLetterCheck)) == 4:
+            return index + 4
+
+print(startOfPacketMarker(dataStreamArray))
