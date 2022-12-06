@@ -1,0 +1,1 @@
+with open("day6.txt") as dataStream:
