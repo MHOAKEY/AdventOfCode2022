@@ -12,3 +12,12 @@ def startOfPacketMarker(data):
             return index + 4
 
 print(startOfPacketMarker(dataStreamArray))
+
+
+def startOfPacketMarkerPart2(data):
+    for index in range(len(data)):
+        fourLetterCheck = data[index:index + 14]
+        if len(set(fourLetterCheck)) == 14:
+            return index + 14
+
+print(startOfPacketMarkerPart2(dataStreamArray))
