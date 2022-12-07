@@ -86,7 +86,7 @@ for num in scoreABC:
 for num in scoreXYZ:
     scoreXYZTotal += num
 
-print(str(scoreABCTotal) + " " + str(scoreXYZTotal))
+# print(str(scoreABCTotal) + " " + str(scoreXYZTotal))
 
 
 # X rock = lose
@@ -121,4 +121,5 @@ for i in matches:
 for num in scoreXYZ2:
     scoreXYZ2Total += num
 
-print(str(scoreXYZ2Total))
+# print(str(scoreXYZ2Total))
+print(matches)
